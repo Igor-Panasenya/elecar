@@ -73,7 +73,7 @@ const Popular = () => {
                 <h3 className="w-56 text-center" data-aos="fade-up">Chose Your Electric Car Of The Porsche Brand</h3>
 
                 <Swiper
-                    slidesPerView={1.5}
+                    slidesPerView={2}
                     spaceBetween={50}
                     loop={true}
                     grabCursor={true}
@@ -95,7 +95,7 @@ const Popular = () => {
                             spaceBetween: 30,
                         },
                     }}
-                    className="mySwiper w-[550px] mt-16 md:w-[790px]"
+                    className="mySwiper w-[500px] mt-16 md:w-[790px]"
                     data-aos="fade-up"
                     data-aos-delay="300"
                 >

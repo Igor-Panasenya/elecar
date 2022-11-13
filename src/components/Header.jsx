@@ -47,8 +47,8 @@ const Header = ({scroll}) => {
                         <button onClick={() => onClickMode()} className='w-6 flex justify-center hover:text-activeColor'>
                             {
                                 colorTheme === 'dark'
-                            ? <FaSun />
-                            : <BsMoonFill size={15}/>
+                            ? <BsMoonFill size={15}/>
+                            : <FaSun />
                             }
                         </button>
 
@@ -57,10 +57,8 @@ const Header = ({scroll}) => {
 
                     <button id='mode' className='text-primary sm:hidden relative z-50 text-primary hover:text-activeColor' onClick={() => setIsVisibleMenu(!isVisibleMenu)}>
                         {isVisibleMenu
-                            ?
-                            <VscClose size={30} />
-                            :
-                            <CgMenuRight size={30} />
+                            ? <VscClose size={30} />
+                            : <CgMenuRight size={30} />
                         }
                     </button>
 
