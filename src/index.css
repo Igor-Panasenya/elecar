@@ -63,7 +63,6 @@ body {
     text-decoration: none;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-    /*transition: all ease .3s;*/
 }
 a, button, img {
     transition: var(--transitionSlow);
@@ -76,6 +75,9 @@ button.active {
 }
 button.active img {
     opacity: 1;
+}
+.transition-bg {
+    transition: all linear .5s;
 }
 
 h1 {
@@ -144,7 +146,7 @@ h6 {
 }
 
 .swiper-pagination-bullet {
-    background-color: #ababab !important;
+    background-color: #b91e1e !important;
 }
 .swiper-pagination-bullet-active {
     background-color: var(--activeColor)!important;
@@ -152,6 +154,11 @@ h6 {
 .header-active {
     box-shadow: 0 0 15px black;
 }
+
+.card-transition {
+    transition: all ease .5s;
+}
+
 ::-webkit-scrollbar {
     background-color: #0e1011;
     width: 10px;

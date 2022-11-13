@@ -74,8 +74,6 @@ const Featured = () => {
         }
     }
 
-    console.log(LuxuryCarsNav[isActiveNavItem].title)
-
     //
     // const [mouseX, setMouseX] = useState(0)
     // const [mouseY, setMouseY] = useState(0)
@@ -93,9 +91,9 @@ const Featured = () => {
 
 
     return (
-        <section id='Featured' className='py-16'>
+        <section id='Featured' className='text-primary py-16'>
             <div className="container flex flex-col items-center">
-                <h3 className="text-center" data-aos="fade-up">Featured Luxury Cars</h3>
+                <h3 className="text-black dark:text-primary text-center" data-aos="fade-up">Featured Luxury Cars</h3>
 
                 {/*Featured content*/}
                 <div className='flex flex-col items-center gap-10 mt-10'>
@@ -115,7 +113,7 @@ const Featured = () => {
                     </div>
 
                     {/*luxury cars items*/}
-                    <div className='flex w-[98%] flex-col sm:flex-row sm:flex-wrap gap-10 sm:w-[798px]' data-aos="fade-up" data-aos-delay="600">
+                    <div className='card-transition flex w-[98%] flex-col sm:flex-row sm:flex-wrap gap-10 sm:w-[798px]' data-aos="fade-up" data-aos-delay="600">
 
                         {luxuryCarsItems.map(luxuryCar =>
 

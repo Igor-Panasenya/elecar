@@ -84,18 +84,18 @@ const Popular = () => {
                     breakpoints={{
                         480: {
                             slidesPerView: 2,
-                            spaceBetween: 50,
+                            spaceBetween: 10,
                         },
                         768: {
-                            slidesPerView: 3,
-                            spaceBetween: 50,
+                            slidesPerView: 2,
+                            spaceBetween: 10,
                         },
-                        1024: {
+                        1060: {
                             slidesPerView: 3,
                             spaceBetween: 30,
                         },
                     }}
-                    className="mySwiper w-[100vw] xs:w-[85vw] sm:w-[85vw] mt-16 lg:w-[55vw]"
+                    className="mySwiper w-[550px] mt-16 md:w-[790px]"
                     data-aos="fade-up"
                     data-aos-delay="300"
                 >
@@ -104,12 +104,12 @@ const Popular = () => {
                         <SwiperSlide key={popularItem.id}>
 
                             <div className='relative bg-bgBoxColor py-8 px-5 rounded-2xl w-[238px] group/card overflow-hidden'>
-                                <h4>{popularItem.carBrand}</h4>
+                                <h4 className='text-primary'>{popularItem.carBrand}</h4>
                                 <h5 className='text-secondary mt-3' >{popularItem.model}</h5>
 
                                 <img className='w-44 ml-8 my-5 group-hover/card:-translate-y-2' src={`../img/popular${popularItem.id}.png`} alt="popular"/>
 
-                                <div className='grid grid-cols-2 gap-2 my-4'>
+                                <div className='text-primary grid grid-cols-2 gap-2 my-4'>
                                     <div className='flex flex-row gap-2 items-center w-80'>
                                         <SlSpeedometer />
                                         <span className='text-[12px] flex flex-row'>
@@ -130,7 +130,7 @@ const Popular = () => {
                                     </div>
                                 </div>
 
-                                <span className='text-[20px]'>${popularItem.features.price}</span>
+                                <span className='text-primary text-[20px]'>${popularItem.features.price}</span>
 
                             </div>
 

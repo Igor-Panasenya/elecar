@@ -31,7 +31,7 @@ function App() {
     };
 
   return (
-    <div className="App bg-bgColor text-primary">
+    <div className="App bg-gray-200 text-black dark:bg-bgColor dark:text-primary transition-bg">
         <Header scroll={scroll} />
 
         <main>

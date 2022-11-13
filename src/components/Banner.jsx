@@ -7,11 +7,11 @@ import CountUp from "react-countup";
 
 const Banner = () => {
     return (
-        <section id='Home' className="py-16 mt-10 sm:mt-24">
+        <section id='Home' className="py-16 mt-10 sm:mt-18">
             <div className="container flex flex-col items-center">
                 <h1 data-aos="fade-down">Choose The Best Car</h1>
                 <p className='font-medium mt-3' data-aos="fade-down" data-aos-delay="300" >Porsche Mission E</p>
-                <p className='text-secondary flex items-center gap-1' data-aos="fade-down" data-aos-delay="600" >
+                <p className='text-secondaryLight dark:text-secondary flex items-center gap-1' data-aos="fade-down" data-aos-delay="600" >
                     <GiElectric className='text-activeColor' size={13}/>
                     Electric car
                 </p>
@@ -31,7 +31,7 @@ const Banner = () => {
                             )}
                         </CountUp>
 
-                        <p className='text-center text-[12px] text-secondary mt-1' >TEMPERATURE</p>
+                        <p className='text-center text-[12px] text-secondaryLight dark:text-secondary mt-1' >TEMPERATURE</p>
                     </div>
 
                     <div className='flex flex-col items-center'>
@@ -45,7 +45,7 @@ const Banner = () => {
                             )}
                         </CountUp>
 
-                        <p className='text-center text-[12px] text-secondary mt-1' >MILEAGE</p>
+                        <p className='text-center text-[12px] text-secondaryLight dark:text-secondary mt-1' >MILEAGE</p>
                     </div>
 
                     <div className='flex flex-col items-center'>
@@ -60,7 +60,7 @@ const Banner = () => {
                             )}
                         </CountUp>
 
-                        <p className='text-center text-[12px] text-secondary mt-1' >BATTERY</p>
+                        <p className='text-center text-[12px] text-secondaryLight dark:text-secondary mt-1' >BATTERY</p>
                     </div>
                 </div>
 

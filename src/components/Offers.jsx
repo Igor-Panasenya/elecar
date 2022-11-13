@@ -3,7 +3,7 @@ import imageCar from '../img/offer.png';
 
 const Offers = () => {
     return (
-        <section className='py-24 bg-[url("img/offer-bg.png")] bg-cover'>
+        <section className='text-primary py-24 bg-[url("img/offer-bg.png")] bg-cover'>
             <div className="container flex flex-col sm:flex-row gap-20">
 
                 {/*content*/}
