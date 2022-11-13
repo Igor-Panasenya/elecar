@@ -37,6 +37,7 @@ const Logos = () => {
 
                 {logos.map((logo, index) =>
                     <img
+                        key={logo.title}
                         className="h-6 flex flex-wrap mx-auto ss:w-auto opacity-50 hover:opacity-100 md:h-12"
                         src={`./img/${logo.image}.png`}
                         alt="logo"

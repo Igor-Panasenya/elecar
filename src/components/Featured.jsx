@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {SlSpeedometer} from "react-icons/sl";
 import {RiChargingPile2Line, RiFundsBoxLine} from "react-icons/ri";
 
 const Featured = () => {
 
+    // карточки и состояние карточек
     const luxuryCars = [
         {
             id: '1',
@@ -41,6 +42,9 @@ const Featured = () => {
             price: '126.900',
         },
     ]
+    const [luxuryCarsItems, setLuxuryCarsItems] = useState([...luxuryCars])
+
+    // навигация по фильтру
     const LuxuryCarsNav = [
         {
             title: 'All',
@@ -60,6 +64,33 @@ const Featured = () => {
         },
     ]
     const [isActiveNavItem, setIsActiveNavItem] = useState(0)
+    const onClickCarsNav = (index) => {
+        setIsActiveNavItem(index)
+
+        if (index === 0) {
+            setLuxuryCarsItems(luxuryCars)
+        } else {
+            setLuxuryCarsItems([...luxuryCars].filter(card => card.carBrand === LuxuryCarsNav[index].title))
+        }
+    }
+
+    console.log(LuxuryCarsNav[isActiveNavItem].title)
+
+    //
+    // const [mouseX, setMouseX] = useState(0)
+    // const [mouseY, setMouseY] = useState(0)
+    // const handleMove = (e) => {
+    //     setMouseX(e.clientX)
+    //     setMouseY(e.clientY)
+    // }
+    //
+    // useEffect(() => {
+    //     const card = document.querySelector('.car-card')
+    //         card.addEventListener('mousemove', handleMove)
+    //     return () => window.removeEventListener('mousemove', handleMove)
+    // }, [])
+    //
+
 
     return (
         <section id='Featured' className='py-16'>
@@ -75,7 +106,7 @@ const Featured = () => {
                             <button
                                 key={LuxuryCarsNavItem.title}
                                 className={`${isActiveNavItem === index ? 'active' : ''} w-10 h-10 flex justify-center items-center bg-bgBoxColor hover:bg-activeColor rounded-xl group/navItem`}
-                                onClick={() => setIsActiveNavItem(index)}
+                                onClick={() => onClickCarsNav(index)}
                             >
                                 <img src={`${LuxuryCarsNavItem.image}`} className='w-[55%] opacity-50 group-hover/navItem:opacity-100'/>
 
@@ -86,9 +117,9 @@ const Featured = () => {
                     {/*luxury cars items*/}
                     <div className='flex w-[98%] flex-col sm:flex-row sm:flex-wrap gap-10 sm:w-[798px]' data-aos="fade-up" data-aos-delay="600">
 
-                        {luxuryCars.map(luxuryCar =>
+                        {luxuryCarsItems.map(luxuryCar =>
 
-                            <div className='relative bg-bgBoxColor py-8 px-5 rounded-2xl w-[238px] group/card overflow-hidden'>
+                            <div key={luxuryCar.id} className='car-card relative bg-bgBoxColor py-8 px-5 rounded-2xl w-[238px] group/card overflow-hidden'>
                                 <h4>{luxuryCar.carBrand}</h4>
                                 <h5 className='text-secondary mt-3' >{luxuryCar.model}</h5>
 
@@ -106,6 +137,15 @@ const Featured = () => {
                 </div>
 
             </div>
+
+            {/*<div className={`*/}
+            {/* absolute top-[500px] left-[${mouseX}px]*/}
+            {/* w-[250px] h-[250px] z-40*/}
+            {/* rounded-full*/}
+            {/* blur-3xl*/}
+            {/* bg-activeColor`}>*/}
+            {/*    */}
+            {/*</div>*/}
         </section>
     );
 };

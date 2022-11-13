@@ -152,6 +152,14 @@ h6 {
 .header-active {
     box-shadow: 0 0 15px black;
 }
+::-webkit-scrollbar {
+    background-color: #0e1011;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--activeColor);
+    border-radius: 5px;
+}
 
 /*button {*/
 /*    cursor: pointer;*/
@@ -208,14 +216,7 @@ h6 {
 /*}*/
 
 
-/*::-webkit-scrollbar {*/
-/*    background-color: transparent;*/
-/*    width: 10px;*/
-/*}*/
-/*::-webkit-scrollbar-thumb {*/
-/*    background-color: var(--color-bg-card);*/
-/*    border-radius: 5px;*/
-/*}*/
+
 
 /*.scroll-up {*/
 /*    position: fixed;*/

@@ -63,7 +63,7 @@ const Footer = () => {
 
                     <div className='flex flex-col gap-1 mt-6'>
                         {Company.map(company =>
-                            <a href={company.link} className='text-secondary hover:text-primary'>
+                            <a href={company.link} key={company.title} className='text-secondary hover:text-primary'>
                                 {company.title}
                             </a>
                         )}
@@ -75,7 +75,7 @@ const Footer = () => {
 
                     <div className='flex flex-col gap-1 mt-6'>
                         {Information.map(info =>
-                            <a href={info.link}className='text-secondary hover:text-primary'>
+                            <a href={info.link} key={info.title} className='text-secondary hover:text-primary'>
                                 {info.title}
                             </a>
                         )}

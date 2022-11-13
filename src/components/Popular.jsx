@@ -82,8 +82,12 @@ const Popular = () => {
                     }}
                     modules={[Pagination]}
                     breakpoints={{
-                        768: {
+                        480: {
                             slidesPerView: 2,
+                            spaceBetween: 50,
+                        },
+                        768: {
+                            slidesPerView: 3,
                             spaceBetween: 50,
                         },
                         1024: {
@@ -91,7 +95,7 @@ const Popular = () => {
                             spaceBetween: 30,
                         },
                     }}
-                    className="mySwiper w-[100vw] sm:w-[90vw] mt-16 lg:w-[60vw]"
+                    className="mySwiper w-[100vw] xs:w-[85vw] sm:w-[85vw] mt-16 lg:w-[55vw]"
                     data-aos="fade-up"
                     data-aos-delay="300"
                 >
