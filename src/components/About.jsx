@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutImage from '../img/about.png';
+import {Link} from "react-router-dom";
 
 const About = () => {
     return (
@@ -22,9 +23,9 @@ const About = () => {
                         new and innovative platforms that last a long time.
                     </p>
 
-                    <button className='border-activeColor border-solid border-[1px] rounded-md px-8 py-3 w-auto hover:bg-activeColor'>
+                    <Link to='/know-more' className='border-activeColor border-solid border-[1px] rounded-md px-8 py-3 w-auto hover:bg-activeColor'>
                         Know more
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

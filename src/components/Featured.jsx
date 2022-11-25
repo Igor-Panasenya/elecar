@@ -91,7 +91,7 @@ const Featured = () => {
 
 
     return (
-        <section id='Featured' className='text-primary py-16'>
+        <section id='Featured' className='text-primary py-20'>
             <div className="container flex flex-col items-center">
                 <h3 className="text-black dark:text-primary text-center" data-aos="fade-up">Featured Luxury Cars</h3>
 
@@ -117,7 +117,7 @@ const Featured = () => {
 
                         {luxuryCarsItems.map(luxuryCar =>
 
-                            <div key={luxuryCar.id} className='car-card relative bg-bgBoxColor py-8 px-5 rounded-2xl w-[238px] group/card overflow-hidden'>
+                            <div key={luxuryCar.id} className='car-card relative bg-bgBoxColor py-8 px-5 rounded-2xl w-[238px] group/card overflow-hidden' data-aos="fade-left">
                                 <h4>{luxuryCar.carBrand}</h4>
                                 <h5 className='text-secondary mt-3' >{luxuryCar.model}</h5>
 

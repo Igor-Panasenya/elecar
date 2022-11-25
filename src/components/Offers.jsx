@@ -1,5 +1,6 @@
 import React from 'react';
 import imageCar from '../img/offer.png';
+import {Link} from "react-router-dom";
 
 const Offers = () => {
     return (
@@ -17,9 +18,9 @@ const Offers = () => {
                     </p>
 
 
-                    <button className='border-activeColor border-solid border-[1px] rounded-md px-8 py-3 w-[180px] hover:bg-activeColor'>
+                    <Link to="/know-more" className='flex justify-center border-activeColor border-solid border-[1px] rounded-md px-8 py-3 w-[180px] hover:bg-activeColor'>
                         Know more
-                    </button>
+                    </Link>
 
                 </div>
 

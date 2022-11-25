@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 
 const Banner = () => {
     return (
-        <section id='Home' className="py-16 mt-10 sm:mt-18">
+        <section id='Home' className="py-20 sm:mt-18">
             <div className="container flex flex-col items-center">
                 <h1 data-aos="fade-down">Choose The Best Car</h1>
                 <p className='font-medium mt-3' data-aos="fade-down" data-aos-delay="300" >Porsche Mission E</p>

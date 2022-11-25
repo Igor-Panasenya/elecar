@@ -5,6 +5,7 @@ import {VscClose} from "react-icons/vsc";
 import {FaSun} from "react-icons/fa";
 import {BsMoonFill} from "react-icons/bs";
 import useDarkMode from "../hook/useDarkMode";
+import {Link} from "react-router-dom";
 
 const Header = ({scroll}) => {
 
@@ -23,10 +24,10 @@ const Header = ({scroll}) => {
         fixed top-0 left-0 z-40 bg-bgBoxColor dark:bg-bgColor w-full ${scroll > 50 ? 'header-active' : ''}`} >
             <div className="container">
                 <nav className='flex justify-between items-center py-4 text-primary'>
-                    <a href="#" className="logo hover:text-activeColor flex items-center gap-2 relative z-50">
+                    <Link to="/" className="logo hover:text-activeColor flex items-center gap-2 relative z-50">
                         <RiSteeringFill className='hover:text-activeColor' size={20}/>
                         Elecar
-                    </a>
+                    </Link>
 
                     <div className={
                         `menu flex flex-col bg-bgBoxColor dark:bg-bgColor py-10 px-32 fixed w-[100vw] min-w-fit

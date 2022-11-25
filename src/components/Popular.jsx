@@ -68,7 +68,7 @@ const Popular = () => {
         },
     ]
     return (
-        <section id='Popular' className='mt-0 py-16 sm:mt-10'>
+        <section id='Popular' className='mt-0 py-20 sm:mt-10'>
             <div className="container flex flex-col items-center">
                 <h3 className="w-56 text-center" data-aos="fade-up">Chose Your Electric Car Of The Porsche Brand</h3>
 

@@ -3,48 +3,49 @@ import {RiSteeringFill} from "react-icons/ri";
 import {FaFacebookF} from "react-icons/fa";
 import {BsInstagram} from "react-icons/bs";
 import {FiTwitter} from "react-icons/fi";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
 
     const Company = [
         {
             title: 'About',
-            link: '#'
+            link: '/about'
         },
         {
             title: 'Cars',
-            link: '#'
+            link: '/cars'
         },
         {
             title: 'History',
-            link: '#'
+            link: '/history'
         },
         {
             title: 'Shop',
-            link: '#'
+            link: '/shop'
         },
     ]
     const Information = [
         {
             title: 'Request a quote',
-            link: '#'
+            link: '/request-a-quote'
         },
         {
             title: 'Find a dealer',
-            link: '#'
+            link: '/find-a-dealer'
         },
         {
             title: 'Contacts us',
-            link: '#'
+            link: '/contacts-us'
         },
         {
             title: 'Services',
-            link: '#'
+            link: '/services'
         },
     ]
 
     return (
-        <footer className="pt-0 sm:pt-16 pb-2">
+        <footer className="pt-0 sm:pt-16 pb-2 w-[100vw]">
             <div className="container flex flex-col sm:flex-row gap-10" data-aos="fade-up">
                 <div className='sm:w-[35%]'>
                     <a href="#" className="logo text-2xl hover:text-activeColor flex items-center gap-2">
@@ -63,9 +64,9 @@ const Footer = () => {
 
                     <div className='flex flex-col gap-1 mt-6'>
                         {Company.map(company =>
-                            <a href={company.link} key={company.title} className='text-secondaryLight dark:text-secondary hover:text-black dark:hover:text-primary'>
+                            <Link to={company.link} key={company.title} onClick={() => window.scroll(0,0)} className='text-secondaryLight dark:text-secondary hover:text-black dark:hover:text-primary'>
                                 {company.title}
-                            </a>
+                            </Link>
                         )}
                     </div>
 
@@ -75,9 +76,9 @@ const Footer = () => {
 
                     <div className='flex flex-col gap-1 mt-6'>
                         {Information.map(info =>
-                            <a href={info.link} key={info.title} className='text-secondaryLight dark:text-secondary hover:text-black dark:hover:text-primary'>
+                            <Link to={info.link} key={info.title} onClick={() => window.scroll(0,0)} className='text-secondaryLight dark:text-secondary hover:text-black dark:hover:text-primary'>
                                 {info.title}
-                            </a>
+                            </Link>
                         )}
                     </div>
                 </div>
@@ -93,7 +94,8 @@ const Footer = () => {
             </div>
 
                 {/*footer developer link*/}
-                <p className="flex flex-row justify-center gap-1 text-secondaryLight dark:text-secondary text-xs mt-16 mb-5">Developer: <a className="font-bold text-black dark:text-secondary hover:text-activeColor" href="https://portfolio-panasenya-igor.vercel.app/" target='_blank'> &#32; Igor Panasenia</a></p>
+                <p className="flex flex-row justify-center gap-1 text-secondaryLight dark:text-secondary text-xs mt-16 mb-5">Developer: <a className="font-bold text-black dark:text-secondary hover:text-activeColor dark:hover:text-activeColor" href="https://portfolio-panasenya-igor.vercel.app/" target='_blank'> &#32; Igor Panasenia</a></p>
+
         </footer>
     );
 };

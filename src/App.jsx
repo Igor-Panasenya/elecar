@@ -1,17 +1,13 @@
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import About from "./components/About";
-import Featured from "./components/Featured";
-import Offers from "./components/Offers";
-import Footer from "./components/Footer";
-import MoreFeatures from "./components/MoreFeatures";
-import Popular from "./components/Popular";
-import Logos from "./components/Logos";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect, useState} from "react";
 import ButtonScrollUp from "./components/ButtonScrollUp";
+
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import Layout from "./components/Layout";
+import Header from "./components/Header";
 
 AOS.init({
     duration: 2000,
@@ -31,24 +27,17 @@ function App() {
     };
 
   return (
-    <div className="App bg-gray-200 text-black dark:bg-bgColor dark:text-primary transition-bg">
-        <Header scroll={scroll} />
+      <div className="App bg-gray-200 text-black dark:bg-bgColor dark:text-primary transition-bg">
+          <Routes>
+              <Route path="/" element={<Layout />} >
+                  <Route index element={<MainPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
+              </Route>
+          </Routes>
 
-        <main>
-            <Banner />
-            <About />
-            <Popular />
-            {/*<MoreFeatures />*/}
-            <Featured />
-            <Offers />
-            <Logos />
-        </main>
+          <ButtonScrollUp scroll={scroll} />
+      </div>
 
-        <Footer />
-
-        <ButtonScrollUp scroll={scroll} />
-
-    </div>
   );
 }
 

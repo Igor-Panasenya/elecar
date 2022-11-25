@@ -4,31 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*//dark theme*/
-/*html[data-dark-theme='true'] {*/
-/*    --color-main: #eaeaea;*/
-/*    --color-btn: #eaeaea;*/
-/*    --color-btn-hover: #111111;*/
-/*    --color-second: #9d9d9d;*/
-/*    --color-bg-card: #181a1b;*/
-/*    --color-bg: #0e0e0e;*/
-/*    --color-bg-navbar: #0e0e0e;*/
-/*    --color-bg-cart: #181a1b;*/
-/*    --invert-image: invert(0);*/
-/*}*/
-/*//light theme*/
-/*  html[data-dark-theme='false'] {*/
-/*      --color-main: #181a1b;*/
-/*      --color-btn: #eaeaea;*/
-/*      --color-btn-hover: #3f3e3e;*/
-/*      --color-second: #9d9d9d;*/
-/*      --color-bg-card: #1f1f1f;*/
-/*      --color-bg: #e8e8e8;*/
-/*      --color-bg-navbar: #0e0e0e;*/
-/*      --color-bg-cart: #e8e8e8;*/
-/*      --invert-image: invert(1);*/
-/*  }*/
-
 :root {
     --activeColor: #e14f59;
     --transitionSlow: all .4s ease;
@@ -44,6 +19,9 @@ html, body {
 }
 body {
     overflow: hidden;
+}
+.App {
+
 }
 .container {
     position: relative;
@@ -64,7 +42,7 @@ body {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
 }
-a, button, img {
+a, button, img, Link {
     transition: var(--transitionSlow);
 }
 .active {
@@ -167,94 +145,3 @@ h6 {
     background-color: var(--activeColor);
     border-radius: 5px;
 }
-
-/*button {*/
-/*    cursor: pointer;*/
-/*    background-color: var(--color-main);*/
-/*    color: var(--color-btn);*/
-/*    padding: 14px 32px;*/
-/*    font-size: 16px;*/
-/*    line-height: 24px;*/
-/*    text-transform: uppercase;*/
-/*    border: 1px solid var(--color-main);*/
-/*    transition: all ease .3s;*/
-
-/*&:hover {*/
-/*     background-color: var(--color-btn-hover)!important;*/
-/* }*/
-/*}*/
-/*.btn {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: center;*/
-/*    gap: 0.75rem;*/
-/*    padding: 16px 20px;*/
-/*    border-radius: 0.5rem;*/
-/*    background-color: #080808!important;*/
-/*    border: transparent;*/
-/*    color: var(--color-btn)!important;*/
-/*    text-transform: none;*/
-/*    font-weight: 500;*/
-/*    font-size: 1rem;*/
-/*    transition: var(--transition);*/
-/*    cursor: pointer;*/
-
-/*&:hover {*/
-/*     background-color: var(--color-btn-hover)!important;*/
-/* }*/
-/*}*/
-/*.btn-empty {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    padding: 0;*/
-/*    border-radius: 0;*/
-/*    background-color: transparent;*/
-/*    border: transparent;*/
-/*    color: var(--color-second);*/
-/*    text-transform: none;*/
-/*    transition: var(--transition);*/
-/*    cursor: pointer;*/
-
-/*&:hover {*/
-/*     background-color: transparent!important;*/
-/*     color: var(--color-main);*/
-/* }*/
-/*}*/
-
-
-
-
-/*.scroll-up {*/
-/*    position: fixed;*/
-/*    bottom: -50px;*/
-/*    right: 50px;*/
-/*    padding: 8px;*/
-/*    width: 40px;*/
-/*    height: 40px;*/
-/*    background-color: var(--color-bg-card)!important;*/
-/*    transition: all ease .4s;*/
-/*    opacity: 1;*/
-/*    z-index: 10;*/
-
-/*&.visible {*/
-/*     bottom: 50px;*/
-/* }*/
-/*&:hover {*/
-/*     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);*/
-/* }*/
-/*}*/
-
-/*.dark-bg {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background-color: rgba(14, 14, 14, 0.9);*/
-/*    z-index: 5;*/
-/*}*/
-/*.no-scroll {*/
-/*    position: fixed;*/
-/*    overflow: hidden!important;*/
-/*}*/
