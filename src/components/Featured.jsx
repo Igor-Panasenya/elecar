@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {SlSpeedometer} from "react-icons/sl";
-import {RiChargingPile2Line, RiFundsBoxLine} from "react-icons/ri";
+import React, {useState} from 'react';
+import LuxuryItem from "./LuxuryItem";
 
 const Featured = () => {
 
@@ -74,22 +73,6 @@ const Featured = () => {
         }
     }
 
-    //
-    // const [mouseX, setMouseX] = useState(0)
-    // const [mouseY, setMouseY] = useState(0)
-    // const handleMove = (e) => {
-    //     setMouseX(e.clientX)
-    //     setMouseY(e.clientY)
-    // }
-    //
-    // useEffect(() => {
-    //     const card = document.querySelector('.car-card')
-    //         card.addEventListener('mousemove', handleMove)
-    //     return () => window.removeEventListener('mousemove', handleMove)
-    // }, [])
-    //
-
-
     return (
         <section id='Featured' className='text-primary py-20'>
             <div className="container flex flex-col items-center">
@@ -106,7 +89,7 @@ const Featured = () => {
                                 className={`${isActiveNavItem === index ? 'active' : ''} w-10 h-10 flex justify-center items-center bg-bgBoxColor hover:bg-activeColor rounded-xl group/navItem`}
                                 onClick={() => onClickCarsNav(index)}
                             >
-                                <img src={`${LuxuryCarsNavItem.image}`} className='w-[55%] opacity-50 group-hover/navItem:opacity-100'/>
+                                <img src={`${LuxuryCarsNavItem.image}`} alt="photo" className='w-[55%] opacity-50 group-hover/navItem:opacity-100'/>
 
                             </button>
                         )}
@@ -117,17 +100,7 @@ const Featured = () => {
 
                         {luxuryCarsItems.map(luxuryCar =>
 
-                            <div key={luxuryCar.id} className='car-card relative bg-bgBoxColor py-8 px-5 rounded-2xl w-[238px] group/card overflow-hidden' data-aos="fade-left">
-                                <h4>{luxuryCar.carBrand}</h4>
-                                <h5 className='text-secondary mt-3' >{luxuryCar.model}</h5>
-
-                                <img className='w-44 ml-8 my-5 group-hover/card:-translate-x-4' src={`../img/popular${luxuryCar.id}.png`} alt="popular"/>
-
-                                <span className='text-[20px]'>${luxuryCar.price}</span>
-
-                                {/*shape*/}
-                                <span className='absolute -top-10 -left-10 -z-1 bg-activeColor w-[180px] h-[180px] blur-3xl rounded-3xl opacity-10'></span>
-                            </div>
+                            <LuxuryItem key={luxuryCar.id} luxuryCar={luxuryCar} />
 
                         )}
 
@@ -136,14 +109,7 @@ const Featured = () => {
 
             </div>
 
-            {/*<div className={`*/}
-            {/* absolute top-[500px] left-[${mouseX}px]*/}
-            {/* w-[250px] h-[250px] z-40*/}
-            {/* rounded-full*/}
-            {/* blur-3xl*/}
-            {/* bg-activeColor`}>*/}
-            {/*    */}
-            {/*</div>*/}
+
         </section>
     );
 };
